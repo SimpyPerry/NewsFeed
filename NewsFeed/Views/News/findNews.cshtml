@@ -1,0 +1,21 @@
+﻿@model IEnumerable<NewsFeedDTO>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div>
+    @foreach(var news in Model)
+    {
+        <div>
+            <h3>@news.Title</h3>
+            <ul>
+                <li>@news.Author</li>
+                <li>@news.Content</li>
+                <li>@news.CreatedDate</li>
+                <li>@news.UpdatedDate</li>
+            </ul>
+            
+        </div>
+    }
+</div>

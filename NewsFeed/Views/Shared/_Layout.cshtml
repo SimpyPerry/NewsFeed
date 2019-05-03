@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Velkomen til</h1>
+        <menu>
+            <ul class="Liste">
+                <li><a asp-controller="News" asp-action="Index">Forsiden</a></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a asp-controller="News" asp-action="Create">Opret nyhed</a></li>
+                    <li><a asp-controller="Account" asp-action="LogOut">Log ud!</a></li>
+                }
+                else
+                {
+                    <li><a asp-controller="Account" asp-action="Login">Log Ind!</a></li>
+                    <li><a asp-controller="Account" asp-action="Register">Opret bruger</a></li>
+                }
+
+
+            </ul>
+        </menu>
+    </header>
+    <section>
+        <h2>@ViewBag.Title</h2>
+        @RenderBody()
+    </section>
+</body>
+</html>

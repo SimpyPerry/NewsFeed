@@ -1,0 +1,34 @@
+﻿@model NewsFeedDTO
+@{
+    ViewData["Title"] = "Opret ny Nyhed";
+}
+
+
+<form method="post">
+    <div asp-validation-summary="All"></div>
+
+    <label asp-for="Title">Title:</label>
+    <br />
+    <input asp-for="Title" />
+    <br />
+
+    <label asp-for="Author">Forfatter</label>
+    <br />
+    <input asp-for="Author" />
+    <br />
+
+    <label asp-for="Content">Skriv nyhed:</label>
+    <br />
+    <textarea rows="5" asp-for="Content"></textarea>
+    <br />
+
+    <label asp-for="HashTags">HashTags</label>
+    <br />
+    <input rows="5" asp-for="HashTags" />
+    <br />
+
+
+    <input type="submit" value="Opret Nyhed" />
+
+</form>
+

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsFeed", "NewsFeed\NewsFeed.csproj", "{C8B05A8C-E99B-4F3A-8B36-7EA4E4BD78CC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsFeedAPI", "NewsFeedAPI\NewsFeedAPI.csproj", "{717F8ABA-AECB-4065-84F7-CF0CAC72B173}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8B05A8C-E99B-4F3A-8B36-7EA4E4BD78CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B05A8C-E99B-4F3A-8B36-7EA4E4BD78CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B05A8C-E99B-4F3A-8B36-7EA4E4BD78CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B05A8C-E99B-4F3A-8B36-7EA4E4BD78CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{717F8ABA-AECB-4065-84F7-CF0CAC72B173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{717F8ABA-AECB-4065-84F7-CF0CAC72B173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{717F8ABA-AECB-4065-84F7-CF0CAC72B173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{717F8ABA-AECB-4065-84F7-CF0CAC72B173}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2B14A6BE-B641-4AEC-8B32-81A4A9D0A221}
+	EndGlobalSection
+EndGlobal
