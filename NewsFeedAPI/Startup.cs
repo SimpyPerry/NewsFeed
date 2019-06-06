@@ -33,12 +33,13 @@ namespace NewsFeedAPI
             string connectionString = "Server=(localdb)\\mssqllocaldb;Database=NewsDatabase;Trusted_Connection=True;";
             services.AddAutoMapper();
 
+            //Gør repo tilgængeligt for app'ens andre gennem constructor injection
             //Sætter livstiden for servicen for et enkelt request
             services.AddScoped<INewsFeedRepo, NewsFeedRepo>();
             
             //Transient services er skabt de bliver requested fra servicecontaineren
             //Singelton services er skabt først gang de bliver requested, hvert request derefter bruger den samme instans
-            //Scoped services er skabt en gang per client request
+            //Scoped services er skabt en gang per client request(Http request)
 
 
             services.AddDbContext<NewsFeedContext>(cfg => {
