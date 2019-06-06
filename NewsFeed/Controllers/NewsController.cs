@@ -23,7 +23,7 @@ namespace NewsFeed.Controllers
         //private readonly INewsFeedRepo _newsFeed;
         //private readonly IMapper _mapper;
 
-        public NewsController(INewsFeedRepo newsFeed, IMapper mapper)
+        public NewsController()
         {
 
             //_newsFeed = newsFeed;
