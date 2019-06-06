@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<NewsFeedDTO>
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -15,9 +16,12 @@
                 <li>@news.CreatedDate</li>
                 <li>@news.UpdatedDate</li>
                 <li>@news.HashTags</li>
+               
                 
                 
             </ul>
+            @Html.ActionLink("Slet", "Delete"
+           , "News", new { id = news.NewsId })
             
         </div>
     }

@@ -30,7 +30,6 @@ namespace NewsFeed.Controllers
         }
 
         [HttpPost]
-        
         public async Task<IActionResult> Login(LoginModel model)
         {
             //Tjekker om modelstaten overholdes

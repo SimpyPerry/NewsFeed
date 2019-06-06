@@ -34,6 +34,8 @@ namespace NewsFeed.Controllers
         }
 
         //public IActionResult Index()
+
+        //ActionResult er normalt et View
         public async Task<IActionResult> Index()
         {
             //Læser dataen fra API'en
@@ -119,6 +121,25 @@ namespace NewsFeed.Controllers
             //var result = _mapper.Map<IEnumerable<NewsFeedEntity>, IEnumerable<NewsFeedDTO>>(news);
 
             return View(JsonConvert.DeserializeObject<IEnumerable<NewsFeedDTO>>(result));
+        }
+
+        
+
+        
+        public async Task<IActionResult> Delete(int id)
+        {
+            var response = await _httpClient.DeleteAsync(BaseEndPoint + $"/{id}");
+
+
+            if (response.IsSuccessStatusCode)
+            {
+                return RedirectToAction("Index", "News");
+            }
+
+            return RedirectToAction("index", "news");
+
+            
+            
         }
     }
 }

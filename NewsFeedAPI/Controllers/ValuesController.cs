@@ -36,9 +36,6 @@ namespace NewsFeedAPI.Controllers
             return result;
         }
 
-        
-       
-
         //Fejl her FromBody var sat til LoginModel istedet for NewsFeedDTO
         [HttpPost("addNews")]
         public IActionResult CreateNews([FromBody]NewsFeedDTO model )
@@ -69,7 +66,7 @@ namespace NewsFeedAPI.Controllers
         }
 
         // PUT api/values/5
-        [HttpPost("{id}")]
+        [HttpPost("DeleteANews/{id}")]
         public IActionResult UpdateANews(int id, [FromBody] NewsFeedDTO model)
         {
             if (!ModelState.IsValid)
@@ -121,6 +118,29 @@ namespace NewsFeedAPI.Controllers
             return Ok(result);
         }
 
+        [HttpDelete("{id}")]
+        public IActionResult DeleteOneNews(int id)
+        {
+
+            
+
+           var news = _newsFeed.GetANews(id);
+
+            if(news == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                _newsFeed.DeleteTheNews(id);
+                _newsFeed.SaveAll();
+
+                return NoContent();
+                
+            }
+            
+           
+        }
        
     }
 }

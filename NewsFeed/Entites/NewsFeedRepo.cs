@@ -19,6 +19,12 @@ namespace NewsFeed.Entites
             _newsFeed.Add(result);
         }
 
+        public void DeleteTheNews(int id)
+        {
+            var news = _newsFeed.news.Where(x => x.NewsId == id).FirstOrDefault();
+            _newsFeed.news.Remove(news);
+        }
+   
         public NewsFeedEntity GetANews(int id)
         {
             return _newsFeed.news.Where(n => n.NewsId == id).FirstOrDefault();

@@ -13,5 +13,6 @@ namespace NewsFeed.Entites
         NewsFeedEntity GetANews(int id);
         void UpdateEnity(NewsFeedEntity result);
         IEnumerable<NewsFeedEntity> GetNewsFromDates(int fromYear, int fromMonth, int toYear, int toMonth);
+        void DeleteTheNews(int id);
     }
 }
